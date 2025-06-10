@@ -1,16 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Hero } from "@/components/hero";
+// import { Hero } from "@/components/hero";
 import FootballBettingAI from "@/components/neuropredict";
-import { Features2 } from "@/components/features2";
+// import { Features2 } from "@/components/features2";
 
-import { RoadmapSection } from "@/components/roadmaps";
+// import { RoadmapSection } from "@/components/roadmaps";
 // import { Tokenomics } from "@/components/tokenomics";
-import { FaqSection } from "@/components/FAQ2";
-import { Footer } from "@/components/footer";
+// import { FaqSection } from "@/components/FAQ2";
+// import { Footer } from "@/components/footer";
 import { useIsMounted } from "@/hooks/useMounted";
 import { CustomLoading } from "@/components/loader";
-import AboutObscura from "@/components/aboutObscura";
+// import AboutObscura from "@/components/aboutObscura";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);

@@ -113,11 +113,11 @@ const FootballBettingAI = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [openFAQ, setOpenFAQ] = useState(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    const handleMouseMove = (e: any) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
@@ -283,7 +283,7 @@ const FootballBettingAI = () => {
     },
   ];
 
-  const toggleFAQ = (index: any) => {
+  const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
