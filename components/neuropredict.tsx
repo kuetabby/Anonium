@@ -1,19 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
-  ChevronDown,
   Brain,
   Target,
-  TrendingUp,
   Shield,
   Users,
-  Calendar,
   CheckCircle,
   Menu,
   X,
   ArrowRight,
   Star,
   Zap,
-  BarChart3,
   Cpu,
   Database,
   Globe,
@@ -246,7 +242,7 @@ const FootballBettingAI = () => {
 
   const faqData = [
     {
-      question: "How does NeuroPredict's AI algorithm work?",
+      question: "How does NeuroPredict&lsquo;s AI algorithm work?",
       answer:
         "Our quantum-inspired neural network processes over 10,000 variables per match, including player statistics, team performance, weather conditions, historical data, and real-time market sentiment. The AI is trained on 15 years of blockchain-verified football data with continuous learning capabilities.",
     },
@@ -263,12 +259,12 @@ const FootballBettingAI = () => {
     {
       question: "How accurate are the AI predictions?",
       answer:
-        "Our AI maintains a 92%+ accuracy rate across major football leagues. However, sports betting always involves risk, and past performance doesn't guarantee future results. We recommend responsible betting and never wagering more than you can afford to lose.",
+        "Our AI maintains a 92%+ accuracy rate across major football leagues. However, sports betting always involves risk, and past performance doesn&lsquo;t guarantee future results. We recommend responsible betting and never wagering more than you can afford to lose.",
     },
     {
       question: "What are gas fees and network costs?",
       answer:
-        "Gas fees vary by blockchain network. Ethereum mainnet has higher fees but maximum security, while Layer 2 solutions like Polygon offer near-zero fees. We're integrated across 25+ networks so you can choose based on your preferences.",
+        "Gas fees vary by blockchain network. Ethereum mainnet has higher fees but maximum security, while Layer 2 solutions like Polygon offer near-zero fees. We&lsquo;re integrated across 25+ networks so you can choose based on your preferences.",
     },
     {
       question: "How do I earn $PREDICT tokens?",
@@ -378,18 +374,16 @@ const FootballBettingAI = () => {
             </div>
 
             <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
-              {["Home", "About", "Features", "Roadmap", "FAQ"].map(
-                (item, index) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="text-white hover:text-cyan-400 transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg"
-                  >
-                    {item}
-                    <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-500 rounded-full shadow-lg shadow-cyan-400/50"></span>
-                  </a>
-                )
-              )}
+              {["Home", "About", "Features", "Roadmap", "FAQ"].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-white hover:text-cyan-400 transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg"
+                >
+                  {item}
+                  <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-500 rounded-full shadow-lg shadow-cyan-400/50"></span>
+                </a>
+              ))}
               <button className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-500 transform hover:scale-110 font-bold text-sm sm:text-lg relative overflow-hidden group shadow-xl shadow-purple-500/30">
                 <span className="relative z-10 drop-shadow-lg flex items-center gap-2">
                   <Wallet className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -418,18 +412,16 @@ const FootballBettingAI = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-black/95 backdrop-blur-2xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
             <div className="px-4 sm:px-6 py-6 sm:py-8 space-y-6 text-center">
-              {["Home", "About", "Features", "Roadmap", "FAQ"].map(
-                (item, index) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="block text-white hover:text-cyan-400 transition-all duration-300 font-semibold text-xl drop-shadow-lg border-b border-gray-800/50 pb-4 hover:border-cyan-500/50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </a>
-                )
-              )}
+              {["Home", "About", "Features", "Roadmap", "FAQ"].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="block text-white hover:text-cyan-400 transition-all duration-300 font-semibold text-xl drop-shadow-lg border-b border-gray-800/50 pb-4 hover:border-cyan-500/50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              ))}
               <button
                 className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-cyan-500/30 hover:shadow-purple-500/50 transition-all duration-500 flex items-center justify-center gap-3"
                 onClick={() => setIsMenuOpen(false)}
@@ -566,7 +558,7 @@ const FootballBettingAI = () => {
                   </span>
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto drop-shadow-lg px-4">
-                  We're not just predicting football matches – we're
+                  We&lsquo;re not just predicting football matches – we&lsquo;re
                   revolutionizing the entire sports betting ecosystem through
                   <span className="text-cyan-400 font-bold">
                     {" "}
@@ -896,8 +888,8 @@ const FootballBettingAI = () => {
                   </span>
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto drop-shadow-lg px-4">
-                  Everything you need to know about NeuroPredict's AI-powered
-                  football betting platform.
+                  Everything you need to know about NeuroPredict&lsquo;s
+                  AI-powered football betting platform.
                 </p>
               </div>
             </ScrollReveal>
@@ -1108,7 +1100,7 @@ const FootballBettingAI = () => {
                     "Smart Contracts",
                     "DAO Governance",
                     "Bug Bounty",
-                  ].map((item, index) => (
+                  ].map((item) => (
                     <li key={item}>
                       <a
                         href="#"
@@ -1132,7 +1124,7 @@ const FootballBettingAI = () => {
                     { name: "Twitter", color: "pink" },
                     { name: "GitHub", color: "green" },
                     { name: "Medium", color: "orange" },
-                  ].map((item, index) => (
+                  ].map((item) => (
                     <li key={item.name}>
                       <a
                         href="#"
