@@ -242,7 +242,7 @@ const FootballBettingAI = () => {
 
   const faqData = [
     {
-      question: "How does NeuroPredict&lsquo;s AI algorithm work?",
+      question: "How does NeuroPredict's AI algorithm work?",
       answer:
         "Our quantum-inspired neural network processes over 10,000 variables per match, including player statistics, team performance, weather conditions, historical data, and real-time market sentiment. The AI is trained on 15 years of blockchain-verified football data with continuous learning capabilities.",
     },
@@ -259,12 +259,12 @@ const FootballBettingAI = () => {
     {
       question: "How accurate are the AI predictions?",
       answer:
-        "Our AI maintains a 92%+ accuracy rate across major football leagues. However, sports betting always involves risk, and past performance doesn&lsquo;t guarantee future results. We recommend responsible betting and never wagering more than you can afford to lose.",
+        "Our AI maintains a 92%+ accuracy rate across major football leagues. However, sports betting always involves risk, and past performance doesn't guarantee future results. We recommend responsible betting and never wagering more than you can afford to lose.",
     },
     {
       question: "What are gas fees and network costs?",
       answer:
-        "Gas fees vary by blockchain network. Ethereum mainnet has higher fees but maximum security, while Layer 2 solutions like Polygon offer near-zero fees. We&lsquo;re integrated across 25+ networks so you can choose based on your preferences.",
+        "Gas fees vary by blockchain network. Ethereum mainnet has higher fees but maximum security, while Layer 2 solutions like Polygon offer near-zero fees. We're integrated across 25+ networks so you can choose based on your preferences.",
     },
     {
       question: "How do I earn $PREDICT tokens?",
