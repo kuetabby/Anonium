@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 // import CTASection from "@/components/CTASection";
 import Tokenomics from "@/components/Tokenomics";
-import Loader from "@/components/Loader/index";
+import Loader from "@/components/Loader";
 
 const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
