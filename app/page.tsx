@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeatureSection";
+import BenefitSection from "@/components/BenefitSection";
 import RoadmapSection from "@/components/RoadmapSection";
-import FAQSection from "@/components/FaqSection";
+// import FAQSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 // import CTASection from "@/components/CTASection";
-import Tokenomics from "@/components/Tokenomics";
+// import Tokenomics from "@/components/Tokenomics";
 import Loader from "@/components/Loader";
 
 const Page = () => {
@@ -33,10 +33,10 @@ const Page = () => {
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <HeroSection />
       <AboutSection />
-      <FeaturesSection />
-      <Tokenomics />
+      <BenefitSection />
+      {/* <Tokenomics /> */}
       <RoadmapSection />
-      <FAQSection />
+      {/* <FAQSection /> */}
       {/* <CTASection /> */}
       <Footer />
     </div>

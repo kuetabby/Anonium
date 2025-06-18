@@ -28,8 +28,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 className={`w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center relative overflow-hidden shadow-2xl shadow-red-500/50 hover:shadow-orange-500/50 transition-all duration-500`}
               >
                 <Image
-                  src="/vpn.jpeg" // Path to the image in the public folder
-                  alt="Anonium VPN Logo"
+                  src="/vpn.png" // Path to the image in the public folder
+                  alt="Anonium logo"
                   width={48} // Set width appropriately (for example, 48px)
                   height={48} // Set height accordingly (for example, 48px)
                   className="object-contain z-10 drop-shadow-lg"
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                   className={`absolute inset-0 bg-gradient-to-r ${primaryGradient} animate-pulse opacity-75`}
                 ></div>
               </div>
-              <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full animate-pulse shadow-lg shadow-yellow-400/50 flex items-center justify-center">
+              <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full animate-pulse shadow-lg shadow-yellow-400/50 flex items-center justify-center z-50">
                 <div className="w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full"></div>
               </div>
             </div>
@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               <h1
                 className={`text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r ${primaryGradient} bg-clip-text text-transparent drop-shadow-2xl`}
               >
-                Anonium VPN
+                Anonium
               </h1>
               <div className="text-xs sm:text-sm text-red-400 font-mono tracking-wider drop-shadow-lg">
                 v1.0 SECURE
@@ -58,20 +58,18 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10 ml-auto">
             {" "}
             {/* Added ml-auto to align items to the right */}
-            {["Home", "About", "Features", "Tokenomics", "Roadmap", "FAQ"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className={`text-white hover:text-red-400 transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg`}
-                >
-                  {item}
-                  <span
-                    className={`absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r ${primaryGradient} group-hover:w-full transition-all duration-500 rounded-full shadow-lg shadow-red-400/50`}
-                  ></span>
-                </a>
-              )
-            )}
+            {["Home", "About", "Benefits", "Roadmap"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className={`text-white hover:text-red-400 transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg`}
+              >
+                {item}
+                <span
+                  className={`absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r ${primaryGradient} group-hover:w-full transition-all duration-500 rounded-full shadow-lg shadow-red-400/50`}
+                ></span>
+              </a>
+            ))}
             {/* <button
               className={`bg-gradient-to-r ${primaryGradient} text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-500 transform hover:scale-110 font-bold text-sm sm:text-lg relative overflow-hidden group shadow-xl shadow-orange-500/30`}
             >
@@ -106,18 +104,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
       {isMenuOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-2xl border-b border-red-500/30 shadow-2xl shadow-red-500/20">
           <div className="px-4 sm:px-6 py-6 sm:py-8 space-y-6 text-center">
-            {["Home", "About", "Features", "Tokenomics", "Roadmap", "FAQ"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className={`block ${textColor} hover:text-red-400 transition-all duration-300 font-semibold text-xl drop-shadow-lg border-b border-gray-800/50 pb-4 hover:border-red-500/50`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {["Home", "About", "Benefits", "Roadmap"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className={`block ${textColor} hover:text-red-400 transition-all duration-300 font-semibold text-xl drop-shadow-lg border-b border-gray-800/50 pb-4 hover:border-red-500/50`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
             {/* <button
               className={`w-full bg-gradient-to-r ${primaryGradient} text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-red-500/30 hover:shadow-orange-500/50 transition-all duration-500 flex items-center justify-center gap-3`}
               onClick={() => setIsMenuOpen(false)}

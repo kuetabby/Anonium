@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { Activity, Wallet, Lock, Globe } from "lucide-react"; // Remove Cpu and keep Globe
 
 const useScrollAnimation = (threshold = 0.1, retrigger = true) => {
@@ -147,6 +148,8 @@ const AboutSection = () => {
         </ScrollReveal>
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
+          <Connectivity className="block lg:hidden" />
+
           <ScrollReveal direction="left" delay={400} retrigger={true}>
             <div className="space-y-6 sm:space-y-8">
               <h3 className="text-2xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 drop-shadow-lg">
@@ -176,7 +179,7 @@ const AboutSection = () => {
                     retrigger={true}
                   >
                     <div
-                      className={`${feature.bg} backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/10 text-center hover:scale-105 transition-transform duration-300 shadow-lg`}
+                      className={`${feature.bg} backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/10 text-center hover:scale-105 transition-transform duration-300 shadow-lg flex flex-col h-full`}
                     >
                       <div className="text-red-400 mb-2 flex justify-center">
                         {feature.icon}
@@ -194,49 +197,65 @@ const AboutSection = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal direction="right" delay={800} retrigger={true}>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-red-500/20 via-orange-500/20 to-pink-500/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-red-500/30 relative overflow-hidden shadow-2xl shadow-red-500/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 animate-pulse"></div>
-
-                <div className="relative z-10 text-center">
-                  <div className="w-16 h-16 sm:w-24 sm:h-24 mx-auto mb-4 sm:mb-6 relative">
-                    <div className="w-full h-full bg-gradient-to-r from-red-400 to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center animate-pulse shadow-2xl shadow-red-500/50">
-                      <Globe className="w-8 h-8 sm:w-12 sm:h-12 text-white drop-shadow-lg" />
-                    </div>
-                    <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-6 h-6 sm:w-8 sm:h-8 bg-green-400 rounded-full flex items-center justify-center shadow-lg shadow-green-400/50">
-                      <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-black animate-pulse" />
-                    </div>
-                  </div>
-
-                  <h4 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg">
-                    Global Connectivity
-                  </h4>
-                  <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed drop-shadow-lg">
-                    Connecting you to thousands of servers worldwide for the
-                    most reliable and secure browsing experience.
-                  </p>
-
-                  <div className="bg-black/30 rounded-xl p-3 sm:p-4 font-mono text-xs sm:text-sm">
-                    <div className="text-green-400 mb-2">$ Network Status</div>
-                    <div className="text-red-400 mb-1">
-                      ├── Servers Online: 1,384/1,384
-                    </div>
-                    <div className="text-orange-400 mb-1">
-                      ├── Connection Speed: 98.7 Mbps
-                    </div>
-                    <div className="text-pink-400">
-                      └── Users Connected: 127,340
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+          <Connectivity className="hidden lg:block" />
         </div>
       </div>
     </section>
   );
 };
+
+const Connectivity = ({ className }: { className?: string | undefined }) => (
+  <ScrollReveal
+    direction="right"
+    delay={800}
+    retrigger={true}
+    className={className}
+  >
+    <div className="relative">
+      <div className="bg-gradient-to-br from-red-500/20 via-orange-500/20 to-pink-500/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-red-500/30 relative overflow-hidden shadow-2xl shadow-red-500/20">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 animate-pulse"></div>
+
+        <div className="relative z-10 text-center">
+          <div className="w-16 h-16 sm:w-24 sm:h-24 mx-auto mb-4 sm:mb-6 relative">
+            <div className="w-full h-full bg-gradient-to-r from-red-400 to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center animate-pulse shadow-2xl shadow-red-500/50">
+              {/* <Globe className="w-8 h-8 sm:w-12 sm:h-12 text-white drop-shadow-lg" /> */}
+              <Image
+                src="/vpn.png"
+                alt="vpn"
+                width={40}
+                height={40}
+                className="w-full h-full rounded-xl"
+              />
+            </div>
+            <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-6 h-6 sm:w-8 sm:h-8 bg-green-400 rounded-full flex items-center justify-center shadow-lg shadow-green-400/50">
+              <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-black animate-pulse" />
+            </div>
+          </div>
+
+          <h4 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg">
+            Global Connectivity
+          </h4>
+          <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed drop-shadow-lg">
+            Connecting you to thousands of servers worldwide for the most
+            reliable and secure browsing experience.
+          </p>
+
+          <div className="bg-black/30 rounded-xl p-3 sm:p-4 font-mono text-xs sm:text-sm">
+            <div className="text-green-400 mb-2">$ Network Status</div>
+            <div className="text-red-400 mb-1">
+              {/* ├── Servers Online: 1,384/1,384 */}
+              Servers Online: 10/50
+            </div>
+            <div className="text-orange-400 mb-1">
+              Connection Speed: 98.7 Mbps
+            </div>
+            {/* <div className="text-pink-400">└── Users Connected: 127,340</div> */}
+            <div className="text-pink-400">Users Connected: 0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ScrollReveal>
+);
 
 export default AboutSection;

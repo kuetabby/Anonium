@@ -92,58 +92,65 @@ const features = [
     icon: <Lock className="w-8 h-8 text-white" />,
     title: "Military-Grade Encryption",
     description:
-      "Experience top-tier security with AES-256 encryption for complete online privacy.",
+      // "Experience top-tier security with AES-256 encryption for complete online privacy.",
+      "Stay secure with AES-256 encryption, keeping your data private at all times.",
   },
   {
     icon: <Globe className="w-8 h-8 text-white" />,
     title: "Global Server Access",
     description:
-      "Connect to a worldwide network of servers across over 50 countries seamlessly.",
+      // "Connect to a worldwide network of servers across over 50 countries seamlessly.",
+      "Connect easily to servers in over 50 countries for fast and unrestricted browsing.",
   },
   {
     icon: <Shield className="w-8 h-8 text-white" />,
     title: "No-Logs Policy",
     description:
-      "Your online activities are never stored or tracked, ensuring maximum privacy.",
+      // "Your online activities are never stored or tracked, ensuring maximum privacy.",
+      "Your online activities are never tracked or stored, ensuring complete privacy.",
   },
   {
     icon: <Users className="w-8 h-8 text-white" />,
     title: "Multi-Device Support",
     description:
-      "Use the VPN on all your devices simultaneously, from smartphones to desktops.",
+      // "Use the VPN on all your devices simultaneously, from smartphones to desktops.",
+      "Protect all your devices including smartphones, desktops, and more simultaneously.",
   },
   {
     icon: <CheckCircle className="w-8 h-8 text-white" />,
     title: "Automatic Kill Switch",
     description:
-      "Your data remains safe even if the VPN connection drops unexpectedly.",
+      // "Your data remains safe even if the VPN connection drops unexpectedly.",
+      "Your data stays safe even if the VPN connection unexpectedly drops.",
   },
   {
     icon: <Lock className="w-8 h-8 text-white" />, // Reusing Lock icon for consistency
     title: "DNS Leak Protection",
     description:
-      "Ensure your DNS queries are securely routed, preventing data leaks and enhancing your privacy.",
+      // "Ensure your DNS queries are securely routed, preventing data leaks and enhancing your privacy.",
+      "Prevent data leaks and keep your DNS queries secure to improve privacy.",
   },
 ];
 
-const FeaturesSection = () => {
+const BenefitSection = () => {
   return (
     <section
-      id="features"
+      id="benefits"
       className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gray-900"
     >
       <div className="max-w-7xl mx-auto">
         <ScrollReveal direction="up" delay={200} retrigger={true}>
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 text-white drop-shadow-2xl">
-              <span className="text-white">VPN</span>
+              <span className="text-white">Anonium</span>
               <br />
               <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
-                FEATURES
+                BENEFITS
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto drop-shadow-lg px-4">
-              Discover the cutting-edge features that keep you secure online.
+              {/* Discover the cutting-edge features that keep you secure online. */}
+              Explore the benefits that keep you secure online
             </p>
           </div>
         </ScrollReveal>
@@ -179,4 +186,4 @@ const FeaturesSection = () => {
   );
 };
 
-export default FeaturesSection;
+export default BenefitSection;

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import {
   Activity,
   ArrowRight,
@@ -117,25 +118,37 @@ const HeroSection = () => {
 
   const stats = [
     {
-      number: "99.9%",
-      label: "Uptime Guarantee",
-      icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
+      label: "Amazon Web Service",
+      img: "/awscloud.png",
     },
     {
-      number: "50+",
-      label: "Countries Covered",
-      icon: <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
+      label: "Microsoft Azure",
+      img: "/azurecloud.png",
     },
     {
-      number: "1M+",
-      label: "Users Worldwide",
-      icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
+      label: "Google Cloud",
+      img: "/gcloud.png",
     },
-    {
-      number: "$100M+",
-      label: "Secure Transactions",
-      icon: <Wallet className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
-    },
+    // {
+    //   number: "99.9%",
+    //   label: "Uptime Guarantee",
+    //   icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
+    // },
+    // {
+    //   number: "50+",
+    //   label: "Countries Covered",
+    //   icon: <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
+    // },
+    // {
+    //   number: "1M+",
+    //   label: "Users Worldwide",
+    //   icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
+    // },
+    // {
+    //   number: "$100M+",
+    //   label: "Secure Transactions",
+    //   icon: <Wallet className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
+    // },
   ];
 
   return (
@@ -207,9 +220,10 @@ const HeroSection = () => {
               <div className="inline-flex items-center bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm border border-red-500/30 rounded-full px-4 sm:px-6 py-2 mb-6 sm:mb-8">
                 <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 mr-2 animate-pulse" />
                 <span className="text-red-400 font-mono text-xs sm:text-sm">
-                  VPN CONNECTION ACTIVE
+                  VPN CONNECTION UNPROTECTED
                 </span>
-                <div className="w-2 h-2 bg-green-400 rounded-full ml-2 animate-pulse"></div>
+                <div className="w-2 h-2 bg-red-400 rounded-full ml-2 animate-pulse"></div>
+                {/* <div className="w-2 h-2 bg-green-400 rounded-full ml-2 animate-pulse"></div> */}
               </div>
             </ScrollReveal>
 
@@ -261,9 +275,7 @@ const HeroSection = () => {
               <button className="group border-2 border-red-400 text-red-400 bg-transparent px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:bg-red-500/10 hover:border-red-400 hover:shadow-2xl hover:shadow-red-500/30 transition-all duration-500 relative overflow-hidden shadow-xl shadow-red-500/20">
                 <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 drop-shadow-lg">
                   <Newspaper className="w-5 h-5 sm:w-6 sm:h-6" />
-                  <span className="hidden sm:inline">
-                    Explore Documentation
-                  </span>
+                  <span className="hidden sm:inline">Documentation</span>
                   <span className="sm:hidden">Docs</span>
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -272,23 +284,35 @@ const HeroSection = () => {
           </ScrollReveal>
 
           {/* Stats with Better Mobile Layout */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+          <h1 className="text-4xl font-black mt-10 mb-6 sm:mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent filter drop-shadow-[0_0_30px_rgba(255,0,58,0.5)]">
+              Powered By
+            </span>
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-10">
             {stats.map((stat, index) => (
               <ScrollReveal
                 key={index}
                 direction="scale"
-                delay={1200 + index * 100}
+                delay={500 + index * 100}
                 retrigger={true}
               >
-                <div className="relative group">
-                  <div className="bg-gradient-to-br from-red-500/10 via-orange-500/10 to-yellow-500/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-red-500/20 hover:border-red-400/50 transition-all duration-500 transform hover:scale-110 shadow-2xl shadow-red-500/20 hover:shadow-red-500/40">
-                    <div className="text-red-400 mb-2 flex justify-center drop-shadow-lg">
-                      {stat.icon}
-                    </div>
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-black bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent mb-1 sm:mb-2 drop-shadow-2xl filter drop-shadow-[0_0_20px_rgba(255,0,58,0.8)]">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-400 font-medium text-xs sm:text-sm drop-shadow-lg">
+                <div
+                  className={`relative group flex flex-col h-full ${
+                    index === stats.length - 1
+                      ? "sm:col-start-1 sm:col-span-2"
+                      : ""
+                  }`} // Center last item on sm
+                >
+                  <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-red-500/10 via-orange-500/10 to-yellow-500/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-red-500/20 hover:border-red-400/50 transition-all duration-500 transform hover:scale-110 shadow-2xl shadow-red-500/20 hover:shadow-red-500/40 h-full">
+                    <Image
+                      src={stat.img}
+                      alt={stat.label}
+                      width={50}
+                      height={40}
+                      className="mx-auto"
+                    />
+                    <div className="w-full mt-4 text-white font-medium drop-shadow-lg">
                       {stat.label}
                     </div>
                   </div>
