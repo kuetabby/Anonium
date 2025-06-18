@@ -154,7 +154,7 @@ const FAQSection = () => {
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto drop-shadow-lg px-4">
-              Everything you need to know about Anonium VPN's features and
+              Everything you need to know about Anonium VPN&apos;s features and
               benefits.
             </p>
           </div>

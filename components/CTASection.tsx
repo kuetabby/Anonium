@@ -87,56 +87,7 @@ const ScrollReveal = ({
 }; // Assuming you have a ScrollReveal component
 import { Lock, ArrowRight, Shield, Star, Wallet, Zap } from "lucide-react"; // Import icons for toggling state
 
-const faqData = [
-  {
-    question: "How does NeuroPredict's AI algorithm work?",
-    answer:
-      "Our quantum-inspired neural network processes over 10,000 variables per match, including player statistics, team performance, weather conditions, historical data, and real-time market sentiment. The AI is trained on 15 years of blockchain-verified football data with continuous learning capabilities.",
-  },
-  {
-    question: "Which cryptocurrencies can I use for betting?",
-    answer:
-      "NeuroPredict supports 50+ cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), USDT, USDC, BNB, MATIC, SOL, and our native $PREDICT token. You can also stake your winnings in DeFi protocols for additional yield.",
-  },
-  {
-    question: "Is NeuroPredict legal and regulated?",
-    answer:
-      "NeuroPredict operates as a decentralized protocol on blockchain networks. Users are responsible for complying with their local gambling and cryptocurrency regulations. Our smart contracts are audited by leading security firms and published on-chain for transparency.",
-  },
-  {
-    question: "How accurate are the AI predictions?",
-    answer:
-      "Our AI maintains a 92%+ accuracy rate across major football leagues. However, sports betting always involves risk, and past performance doesn't guarantee future results. We recommend responsible betting and never wagering more than you can afford to lose.",
-  },
-  {
-    question: "What are gas fees and network costs?",
-    answer:
-      "Gas fees vary by blockchain network. Ethereum mainnet has higher fees but maximum security, while Layer 2 solutions like Polygon offer near-zero fees. We're integrated across 25+ networks, so you can choose based on your preferences.",
-  },
-  {
-    question: "How do I earn $PREDICT tokens?",
-    answer:
-      "You can earn $PREDICT tokens through successful predictions, liquidity provision, DAO participation, referrals, and staking rewards. Token holders also get governance rights and access to premium AI models.",
-  },
-  {
-    question: "Is my data and betting history private?",
-    answer:
-      "Yes, we use zero-knowledge proofs to ensure your betting patterns and personal data remain completely private. Only you can see your full betting history, while the blockchain only stores encrypted transaction hashes.",
-  },
-  {
-    question: "When will the mobile app be released?",
-    answer:
-      "Our iOS and Android apps are scheduled for Q4 2025. The apps will feature push notifications for live predictions, one-tap betting, and seamless wallet integration. Join our Discord for beta testing opportunities.",
-  },
-];
-
 const CTASection = () => {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
-
   return (
     <section className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8">
       <ScrollReveal direction="scale" delay={200}>

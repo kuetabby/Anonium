@@ -1,5 +1,5 @@
 import React from "react";
-import { Lock, Menu, Wallet, X } from "lucide-react"; // Use Lock icon representing security and VPN
+import { Menu, X } from "lucide-react"; // Use Lock icon representing security and VPN
 import Image from "next/image";
 
 interface HeaderProps {
@@ -9,7 +9,6 @@ interface HeaderProps {
 
 // Define color variables for easy updates
 const primaryGradient = "from-red-500 to-orange-500";
-const hoverGradient = "from-orange-500 to-red-500";
 const textColor = "text-white"; // Text color
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {

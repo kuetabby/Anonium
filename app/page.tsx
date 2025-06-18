@@ -7,7 +7,7 @@ import RoadmapSection from "@/components/RoadmapSection";
 import FAQSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
-import CTASection from "@/components/CTASection";
+// import CTASection from "@/components/CTASection";
 import Tokenomics from "@/components/Tokenomics";
 import Loader from "@/components/Loader/index";
 

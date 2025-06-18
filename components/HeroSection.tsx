@@ -101,6 +101,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
+    console.log(scrollY);
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };

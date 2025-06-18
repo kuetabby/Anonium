@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FaCoins,
-  FaNetworkWired,
-  FaDatabase,
-  FaPercent,
-  FaClipboardCheck,
-} from "react-icons/fa";
+import { FaCoins, FaNetworkWired, FaDatabase, FaPercent } from "react-icons/fa";
 
 const Tokenomics = () => {
   const tokenData = [

@@ -1,5 +1,4 @@
 import React from "react";
-import { Lock } from "lucide-react"; // Using Lock icon for VPN representation
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa"; // Telegram and Twitter icons
 import { RiFilePaperFill } from "react-icons/ri"; // Whitepaper icon
 import Image from "next/image";
