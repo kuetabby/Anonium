@@ -3,11 +3,11 @@ import Image from "next/image";
 import {
   Activity,
   ArrowRight,
-  Lock,
-  Shield,
-  Users,
+  // Lock,
+  // Shield,
+  // Users,
   Play,
-  Wallet,
+  // Wallet,
   Newspaper,
 } from "lucide-react";
 
