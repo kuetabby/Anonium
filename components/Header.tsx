@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 // Define color variables for easy updates
-const primaryGradient = "from-red-500 to-orange-500";
+const primaryGradient = "from-[#b6066e] to-[#b6066e]"; // Gradient using #b6066e (you can change to a more complex gradient if needed)
 const textColor = "text-white"; // Text color
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
@@ -44,11 +44,11 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             </div>
             <div>
               <h1
-                className={`text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r ${primaryGradient} bg-clip-text text-transparent drop-shadow-2xl`}
+                className={`text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r ${primaryGradient} bg-clip-text text-white drop-shadow-2xl`}
               >
                 Anonium
               </h1>
-              <div className="text-xs sm:text-sm text-red-400 font-mono tracking-wider drop-shadow-lg">
+              <div className="text-white text-xs sm:text-sm text-red-400 font-mono tracking-wider drop-shadow-lg">
                 v1.0 SECURE
               </div>
             </div>
@@ -56,13 +56,12 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Updated Navigation for Desktop */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10 ml-auto">
-            {" "}
             {/* Added ml-auto to align items to the right */}
             {["Home", "About", "Benefits", "Roadmap"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className={`text-white hover:text-red-400 transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg`}
+                className={`text-white hover:text-[#b6066e] transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg`}
               >
                 {item}
                 <span
@@ -70,6 +69,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 ></span>
               </a>
             ))}
+            {/* Uncomment to enable Subscribe Now button */}
             {/* <button
               className={`bg-gradient-to-r ${primaryGradient} text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-500 transform hover:scale-110 font-bold text-sm sm:text-lg relative overflow-hidden group shadow-xl shadow-orange-500/30`}
             >
@@ -114,6 +114,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 {item}
               </a>
             ))}
+            {/* Uncomment to enable Subscribe Now button */}
             {/* <button
               className={`w-full bg-gradient-to-r ${primaryGradient} text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-red-500/30 hover:shadow-orange-500/50 transition-all duration-500 flex items-center justify-center gap-3`}
               onClick={() => setIsMenuOpen(false)}

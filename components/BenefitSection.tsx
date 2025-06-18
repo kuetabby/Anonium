@@ -144,9 +144,7 @@ const BenefitSection = () => {
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 text-white drop-shadow-2xl">
               <span className="text-white">Anonium</span>
               <br />
-              <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
-                BENEFITS
-              </span>
+              <span className="text-[#b6066e]">BENEFITS</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto drop-shadow-lg px-4">
               {/* Discover the cutting-edge features that keep you secure online. */}
@@ -164,9 +162,9 @@ const BenefitSection = () => {
               retrigger={true}
             >
               <div className="relative">
-                <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-red-500 transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg md:h-72 flex flex-col justify-center hover:shadow-2xl hover:shadow-red-500">
+                <div className="bg-gradient-to-br from-[#b6066e]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-[#b6066e] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg md:h-72 flex flex-col justify-center hover:shadow-2xl hover:shadow-[#b6066e]">
                   <div className="flex flex-col items-center text-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#b6066e] to-black-500 rounded-xl flex items-center justify-center mb-3">
                       {feature.icon}
                     </div>
                     <h3 className="text-xl font-bold text-white drop-shadow-lg">

@@ -2,7 +2,7 @@
 .loader {
   width: 30px;
   aspect-ratio: 0.577;
-  color: red;
+  color: #b6066e;
   display: grid;
   background-image: linear-gradient(
     to bottom right,

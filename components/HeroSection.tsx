@@ -1,15 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import {
-  Activity,
-  ArrowRight,
-  // Lock,
-  // Shield,
-  // Users,
-  Play,
-  // Wallet,
-  Newspaper,
-} from "lucide-react";
+import { Activity, ArrowRight, Play, Newspaper } from "lucide-react";
 
 // Custom hook for scroll animation
 const useScrollAnimation = (threshold = 0.1, retrigger = true) => {
@@ -129,41 +120,21 @@ const HeroSection = () => {
       label: "Google Cloud",
       img: "/gcloud.png",
     },
-    // {
-    //   number: "99.9%",
-    //   label: "Uptime Guarantee",
-    //   icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
-    // },
-    // {
-    //   number: "50+",
-    //   label: "Countries Covered",
-    //   icon: <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
-    // },
-    // {
-    //   number: "1M+",
-    //   label: "Users Worldwide",
-    //   icon: <Users className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
-    // },
-    // {
-    //   number: "$100M+",
-    //   label: "Secure Transactions",
-    //   icon: <Wallet className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />,
-    // },
   ];
 
   return (
     <>
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-800 to-black opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#b6066e] to-black opacity-80"></div>
 
         {/* Animated Background */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-800 to-black opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#b6066e] to-black opacity-80"></div>
           <div className="absolute inset-0">
             {[...Array(50)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-2 h-2 bg-red-400 rounded-full animate-pulse"
+                className="absolute w-2 h-2 bg-[#b6066e] rounded-full animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -202,7 +173,7 @@ const HeroSection = () => {
 
         {/* Mouse Follower Gradient */}
         <div
-          className="absolute w-48 h-48 sm:w-96 sm:h-96 bg-gradient-radial from-red-500/20 via-red-700/10 to-transparent rounded-full blur-3xl transition-all duration-1000 ease-out pointer-events-none"
+          className="absolute w-48 h-48 sm:w-96 sm:h-96 bg-gradient-radial from-[#b6066e]/20 via-red-700/10 to-transparent rounded-full blur-3xl transition-all duration-1000 ease-out pointer-events-none"
           style={{
             left: mousePosition.x - (window.innerWidth < 640 ? 96 : 192),
             top: mousePosition.y - (window.innerWidth < 640 ? 96 : 192),
@@ -217,23 +188,22 @@ const HeroSection = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8 sm:mb-12">
             <ScrollReveal direction="scale" delay={200} retrigger={true}>
-              <div className="inline-flex items-center bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm border border-red-500/30 rounded-full px-4 sm:px-6 py-2 mb-6 sm:mb-8">
-                <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 mr-2 animate-pulse" />
-                <span className="text-red-400 font-mono text-xs sm:text-sm">
+              <div className="inline-flex items-center bg-gradient-to-r from-[#b6066e]/20 to-[#b6066e]/20 backdrop-blur-sm border border-[#b6066e]/30 rounded-full px-4 sm:px-6 py-2 mb-6 sm:mb-8">
+                <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-white mr-2 animate-pulse" />
+                <span className="text-white font-mono text-xs sm:text-sm">
                   VPN CONNECTION UNPROTECTED
                 </span>
-                <div className="w-2 h-2 bg-red-400 rounded-full ml-2 animate-pulse"></div>
-                {/* <div className="w-2 h-2 bg-green-400 rounded-full ml-2 animate-pulse"></div> */}
+                <div className="w-2 h-2 bg-white rounded-full ml-2 animate-pulse"></div>
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={400}>
               <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-6 sm:mb-8 leading-tight">
-                <span className="bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent drop-shadow-2xl filter drop-shadow-[0_0_30px_rgba(255,0,58,0.5)]">
+                <span className="bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent drop-shadow-[0_0_40px rgba(255, 255, 255, 0.9)] filter drop-shadow-[0_0_60px rgba(255, 0, 58, 0.5)]">
                   UNLOCK
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent animate-pulse drop-shadow-2xl filter drop-shadow-[0_0_50px_rgba(255,127,0,0.8)]">
+                <span className="text-[#b6066e] bg-gradient-to-r from-[#b6066e] to-[#b6066e] bg-clip-text text-transparent animate-pulse drop-shadow-2xl filter drop-shadow-[0_0_50px_rgba(245, 40, 145, 0.8)]">
                   YOUR ONLINE PRIVACY
                 </span>
               </h1>
@@ -241,11 +211,11 @@ const HeroSection = () => {
 
             <ScrollReveal direction="up" delay={600}>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-3 sm:mb-4 max-w-4xl mx-auto drop-shadow-xl">
-                <span className="text-red-400 font-bold drop-shadow-lg">
+                <span className="text-[#b6066e] font-bold drop-shadow-lg">
                   Safeguard
                 </span>{" "}
                 your digital footprint with
-                <span className="text-orange-400 font-bold drop-shadow-lg">
+                <span className="text-[#b6066e] font-bold drop-shadow-lg">
                   {" "}
                   top-notch VPN
                 </span>{" "}
@@ -263,22 +233,22 @@ const HeroSection = () => {
 
           <ScrollReveal direction="up" delay={1000}>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-20 px-4">
-              <button className="group bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-500 transform hover:scale-110 relative overflow-hidden shadow-2xl shadow-orange-500/30">
+              <button className="group bg-gradient-to-r from-[#b6066e] to-[#b6066e] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:shadow-2xl hover:shadow-[#b6066e]/50 transition-all duration-500 transform hover:scale-110 relative overflow-hidden shadow-2xl shadow-[#b6066e]/30">
                 <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 drop-shadow-lg">
                   <Play className="w-5 h-5 sm:w-6 sm:h-6" />
                   Start Now
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-500 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#b6066e] via-[#b6066e] to-[#b6066e] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
 
-              <button className="group border-2 border-red-400 text-red-400 bg-transparent px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:bg-red-500/10 hover:border-red-400 hover:shadow-2xl hover:shadow-red-500/30 transition-all duration-500 relative overflow-hidden shadow-xl shadow-red-500/20">
+              <button className="group border-2 border-[#b6066e] text-[#b6066e] bg-transparent px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-white/35 transition-all duration-500 relative overflow-hidden shadow-xl shadow-[#b6066e]/20">
                 <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 drop-shadow-lg">
                   <Newspaper className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="hidden sm:inline">Documentation</span>
                   <span className="sm:hidden">Docs</span>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#b6066e]/10 to-[#b6066e]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
             </div>
           </ScrollReveal>
@@ -304,7 +274,7 @@ const HeroSection = () => {
                       : ""
                   }`} // Center last item on sm
                 >
-                  <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-red-500/10 via-orange-500/10 to-yellow-500/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-red-500/20 hover:border-red-400/50 transition-all duration-500 transform hover:scale-110 shadow-2xl shadow-red-500/20 hover:shadow-red-500/40 h-full">
+                  <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-[#b6066e]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-[#b6066e] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg  flex flex-col justify-center hover:shadow-2xl hover:shadow-[#b6066e] h-full">
                     <Image
                       src={stat.img}
                       alt={stat.label}
@@ -316,7 +286,7 @@ const HeroSection = () => {
                       {stat.label}
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-2xl sm:rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#b6066e]/20 to-[#b6066e]/20 rounded-2xl sm:rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
                 </div>
               </ScrollReveal>
             ))}

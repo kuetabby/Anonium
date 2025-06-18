@@ -125,15 +125,13 @@ const RoadmapSection = () => {
       id="roadmap"
       className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 backdrop-blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#b6066e]/5 to-black-500/5 backdrop-blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <ScrollReveal direction="up" delay={200} retrigger={true}>
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 drop-shadow-2xl">
-              <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
-                VPN ROADMAP
-              </span>
+              <span className="text-[#b6066e]">VPN ROADMAP</span>
               <br />
               <span className="text-white drop-shadow-2xl">
                 TO A SECURE FUTURE
@@ -147,7 +145,7 @@ const RoadmapSection = () => {
         </ScrollReveal>
 
         <div className="relative">
-          <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-500 to-orange-500 rounded-full opacity-70"></div>
+          <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#b6066e] to-black-500 rounded-full opacity-70"></div>
 
           <div className="space-y-8 sm:space-y-16">
             {roadmapItems.map((item, index) => (
@@ -164,15 +162,15 @@ const RoadmapSection = () => {
                 >
                   {/* Mobile Layout */}
                   <div className="sm:hidden w-full pl-12">
-                    <div className="group bg-transparent backdrop-blur-md rounded-2xl p-6 border border-red-500 transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-2xl shadow-black/50">
-                      <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="group bg-transparent backdrop-blur-md rounded-2xl p-6 border border-[#b6066e] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-2xl shadow-black/50">
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#b6066e]/20 to-black-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                       <div className="relative z-10">
                         <div className="flex items-center justify-between mb-4">
                           <span className="text-red-300 font-bold text-sm font-mono">
                             {item.quarter}
                           </span>
-                          <span className="bg-gradient-to-r from-orange-400 to-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                          <span className="bg-gradient-to-r from-black-400 to-[#b6066e] text-white px-2 py-1 rounded-full text-xs font-bold">
                             {item.crypto}
                           </span>
                         </div>
@@ -206,15 +204,15 @@ const RoadmapSection = () => {
                       index % 2 === 0 ? "pr-8" : "pl-8"
                     }`}
                   >
-                    <div className="group bg-transparent backdrop-blur-md rounded-3xl p-8 border border-red-500 transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-2xl shadow-black/50">
-                      <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="group bg-transparent backdrop-blur-md rounded-3xl p-8 border border-[#b6066e] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-2xl shadow-black/50">
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#b6066e]/20 to-black-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                       <div className="relative z-10">
                         <div className="flex items-center justify-between mb-4">
                           <span className="text-red-300 font-bold text-lg font-mono">
                             {item.quarter}
                           </span>
-                          <span className="bg-gradient-to-r from-orange-400 to-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                          <span className="bg-gradient-to-r from-black-400 to-[#b6066e] text-white px-3 py-1 rounded-full text-sm font-bold">
                             {item.crypto}
                           </span>
                         </div>
@@ -243,7 +241,7 @@ const RoadmapSection = () => {
                   </div>
 
                   {/* Center Dot */}
-                  <div className="absolute left-2 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-red-500 to-orange-500 rounded-full border border-black flex items-center justify-center shadow-lg">
+                  <div className="absolute left-2 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-[#b6066e] to-black-500 rounded-full border border-black flex items-center justify-center shadow-lg">
                     <div className="w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse"></div>
                   </div>
                 </div>

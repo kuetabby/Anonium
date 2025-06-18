@@ -2,11 +2,11 @@ import React from "react";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa"; // Telegram and Twitter icons
 import { RiFilePaperFill } from "react-icons/ri"; // Whitepaper icon
 import Image from "next/image";
-const primaryGradient = "from-red-500 to-orange-500";
+const primaryGradient = "from-[#b6066e] to-black-500";
 
 const Footer = () => {
   return (
-    <footer className="bg-black/60 backdrop-blur-2xl border-t border-red-500/30 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 shadow-2xl shadow-red-500/10">
+    <footer className="bg-black/60 backdrop-blur-2xl border-t border-[#b6066e]/30 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 shadow-2xl shadow-[#b6066e]/10">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center justify-center mb-4">
@@ -37,21 +37,21 @@ const Footer = () => {
           <div className="flex flex-row space-x-4">
             <a
               href="#"
-              className="text-red-500 hover:text-red-400 transition-all duration-300 drop-shadow-lg text-sm flex items-center"
+              className="text-[#b6066e] hover:text-white transition-all duration-300 drop-shadow-lg text-sm flex items-center"
               title="Whitepaper"
             >
               <RiFilePaperFill className="w-6 h-6" />
             </a>
             <a
               href="#"
-              className="text-red-500 hover:text-red-400 transition-all duration-300 drop-shadow-lg text-sm flex items-center"
+              className="text-[#b6066e] hover:text-white transition-all duration-300 drop-shadow-lg text-sm flex items-center"
               title="Telegram"
             >
               <FaTelegramPlane className="w-6 h-6" />
             </a>
             <a
               href="#"
-              className="text-red-500 hover:text-red-400 transition-all duration-300 drop-shadow-lg text-sm flex items-center"
+              className="text-[#b6066e] hover:text-white transition-all duration-300 drop-shadow-lg text-sm flex items-center"
               title="Twitter"
             >
               <FaTwitter className="w-6 h-6" />
