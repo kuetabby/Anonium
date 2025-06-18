@@ -19,7 +19,7 @@ const Page = () => {
     // Simulate a loading delay, for example, fetching data
     const timer = setTimeout(() => {
       setLoading(false); // Hide loader after 3 seconds
-    }, 3000);
+    }, 1500);
 
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
