@@ -61,14 +61,14 @@
 @layer base {
   :root {
     --scrollbar-bg: #1a1f24; /* Background scrollbar */
-    --scrollbar-thumb: #9637c4; /* Warna scrollbar */
-    --scrollbar-thumb-hover: #9637c4; /* Hover warna scrollbar */
+    --scrollbar-thumb: #f97316; /* Orange scrollbar */
+    --scrollbar-thumb-hover: #f97316; /* Hover orange scrollbar */
   }
 
   .dark {
     --scrollbar-bg: #1a1f24; /* Background scrollbar */
-    --scrollbar-thumb: #9637c4; /* Warna scrollbar */
-    --scrollbar-thumb-hover: #9637c4; /* Hover warna scrollbar */
+    --scrollbar-thumb: #f97316; /* Orange scrollbar */
+    --scrollbar-thumb-hover: #f97316; /* Hover orange scrollbar */
   }
 
   /* Global Scrollbar Styling */
