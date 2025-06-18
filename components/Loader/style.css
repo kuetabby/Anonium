@@ -1,0 +1,31 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 30px;
+  aspect-ratio: 0.577;
+  color: red;
+  display: grid;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(239, 68, 68, 0.2),
+    /* red-500 color with 20% opacity */ rgba(251, 146, 60, 0.2)
+      /* orange-500 color with 20% opacity */
+  );
+  background-repeat: no-repeat;
+  animation: l17 4s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
+}
+.loader::after {
+  animation-duration: 2s;
+}
+@keyframes l17 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
