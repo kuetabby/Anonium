@@ -1,48 +1,46 @@
 "use client";
-import { useEffect, useState } from "react";
-// import { Hero } from "@/components/hero";
-import FootballBettingAI from "@/components/neuropredict";
-// import { Features2 } from "@/components/features2";
+import React, { useState, useEffect } from "react";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import FeaturesSection from "@/components/FeatureSection";
+import RoadmapSection from "@/components/RoadmapSection";
+import FAQSection from "@/components/FaqSection";
+import Footer from "@/components/Footer";
+import AboutSection from "@/components/AboutSection";
+import CTASection from "@/components/CTASection";
+import Tokenomics from "@/components/Tokenomics";
+import Loader from "@/components/Loader/index";
 
-// import { RoadmapSection } from "@/components/roadmaps";
-// import { Tokenomics } from "@/components/tokenomics";
-// import { FaqSection } from "@/components/FAQ2";
-// import { Footer } from "@/components/footer";
-import { useIsMounted } from "@/hooks/useMounted";
-import { CustomLoading } from "@/components/loader";
-// import AboutObscura from "@/components/aboutObscura";
-
-export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const isMounted = useIsMounted();
+const Page = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true); // State to control the loading
 
   useEffect(() => {
-    if (isMounted) {
-      const timeOut = setTimeout(() => {
-        setIsLoaded(true);
-      }, 2000);
+    // Simulate a loading delay, for example, fetching data
+    const timer = setTimeout(() => {
+      setLoading(false); // Hide loader after 3 seconds
+    }, 3000);
 
-      return () => clearTimeout(timeOut);
-    }
-  }, [isMounted, isLoaded]);
-  if (isMounted && isLoaded) {
-    return (
-      <div className="relative bg-[#070710]">
-        <FootballBettingAI />
-        {/* <Hero /> */}
-        {/* <AboutObscura /> */}
-        {/* <Features2 /> */}
-        {/* <RoadmapSection /> */}
-        {/* <Tokenomics /> */}
-        {/* <FaqSection /> */}
-        {/* <Footer /> */}
-      </div>
-    );
-  } else {
-    return (
-      <div className="homepage-container">
-        <CustomLoading />
-      </div>
-    );
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+
+  if (loading) {
+    return <Loader />; // Change to the loader you prefer
   }
-}
+
+  return (
+    <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <HeroSection />
+      <AboutSection />
+      <FeaturesSection />
+      <Tokenomics />
+      <RoadmapSection />
+      <FAQSection />
+      {/* <CTASection /> */}
+      <Footer />
+    </div>
+  );
+};
+
+export default Page;

@@ -1,32 +1,31 @@
 /* HTML: <div class="loader"></div> */
 .loader {
-  --c: no-repeat linear-gradient(#9637c4 0 0);
-  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
-    var(--c), var(--c), var(--c);
-  background-size: 16px 16px;
-  animation: l32-1 1s infinite, l32-2 1s infinite;
+  width: 30px;
+  aspect-ratio: 0.577;
+  color: red;
+  display: grid;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(239, 68, 68, 0.2),
+    /* red-500 color with 20% opacity */ rgba(251, 146, 60, 0.2)
+      /* orange-500 color with 20% opacity */
+  );
+  background-repeat: no-repeat;
+  animation: l17 4s infinite linear;
 }
-@keyframes l32-1 {
-  0%,
-  100% {
-    width: 45px;
-    height: 45px;
-  }
-  35%,
-  65% {
-    width: 65px;
-    height: 65px;
-  }
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
 }
-@keyframes l32-2 {
-  0%,
-  40% {
-    background-position: 0 0, 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%,
-      100% 0, 50% 0, 50% 50%;
-  }
-  60%,
+.loader::after {
+  animation-duration: 2s;
+}
+@keyframes l17 {
   100% {
-    background-position: 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%, 100% 0,
-      50% 0, 0 0, 50% 50%;
+    transform: rotate(1turn);
   }
 }

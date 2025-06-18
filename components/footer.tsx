@@ -1,66 +1,71 @@
-"use client";
-import Link from "next/link";
+import React from "react";
+import { Lock } from "lucide-react"; // Using Lock icon for VPN representation
+import { FaTelegramPlane, FaTwitter } from "react-icons/fa"; // Telegram and Twitter icons
+import { RiFilePaperFill } from "react-icons/ri"; // Whitepaper icon
 import Image from "next/image";
-import { GitbookIcon, TeleIcon, TwitterIcon } from "@/utils/Icon/socials";
-import { DextoolsIcon } from "@/utils/Icon/dex";
-import { socialsLink } from "@/constants/links";
-// import shape from "@/public/image/shape/shape_ico_hero_section_bottom.svg";
+const primaryGradient = "from-red-500 to-orange-500";
 
-export function Footer() {
+const Footer = () => {
   return (
-    <footer className="text-center py-16 bg-[#070710] text-white">
-      {/* <div className="">
-        <Image src={shape} alt="Shape Divider" className="w-full " priority />
-      </div> */}
-      <div className="container mx-auto px-4">
-        <div className="mb-10">
-          <div className="flex justify-center mb-6">
-            <Image src="/OBS.png" alt="Logo" width={100} height={100} />
+    <footer className="bg-black/60 backdrop-blur-2xl border-t border-red-500/30 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 shadow-2xl shadow-red-500/10">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col items-center text-center">
+          <div className="flex items-center justify-center mb-4">
+            <div
+              className={`w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center relative overflow-hidden shadow-2xl shadow-red-500/50 hover:shadow-orange-500/50 transition-all duration-500`}
+            >
+              <Image
+                src="/vpn.jpeg" // Path to the image in the public folder
+                alt="Anonium VPN Logo"
+                width={48} // Set width appropriately (for example, 48px)
+                height={48} // Set height accordingly (for example, 48px)
+                className="object-contain z-10 drop-shadow-lg"
+              />
+              <div
+                className={`absolute inset-0 bg-gradient-to-r ${primaryGradient} animate-pulse opacity-75`}
+              ></div>
+            </div>
+            <h3 className="text-xl font-bold text-white drop-shadow-lg ml-2">
+              Anonium VPN
+            </h3>
           </div>
-          <div className="flex justify-center gap-4">
-            <Link
-              href={socialsLink.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
+          <p className="text-gray-300 text-sm max-w-md mb-4 drop-shadow-lg">
+            Your privacy is our priority. Enhance your security and access
+            content without restrictions.
+          </p>
+
+          {/* Icons for Whitepaper, Telegram, Twitter */}
+          <div className="flex flex-row space-x-4">
+            <a
+              href="#"
+              className="text-red-500 hover:text-red-400 transition-all duration-300 drop-shadow-lg text-sm flex items-center"
+              title="Whitepaper"
             >
-              <TeleIcon
-                className="fill-white hover:fill-primaryColor transform transition-all duration-300 hover:scale-110 hover:rotate-12"
-                style={{ fontSize: "1.5em" }}
-              />
-            </Link>
-            <Link
-              href={socialsLink.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
+              <RiFilePaperFill className="w-6 h-6" />
+            </a>
+            <a
+              href="#"
+              className="text-red-500 hover:text-red-400 transition-all duration-300 drop-shadow-lg text-sm flex items-center"
+              title="Telegram"
             >
-              <TwitterIcon
-                className="fill-white hover:fill-primaryColor transform transition-all duration-300 hover:scale-110 hover:rotate-12"
-                style={{ fontSize: "1.4em" }}
-              />
-            </Link>
-            <Link
-              href="/whitepaper.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              <FaTelegramPlane className="w-6 h-6" />
+            </a>
+            <a
+              href="#"
+              className="text-red-500 hover:text-red-400 transition-all duration-300 drop-shadow-lg text-sm flex items-center"
+              title="Twitter"
             >
-              <GitbookIcon
-                className="fill-white hover:fill-primaryColor transform transition-all duration-300 hover:scale-110 hover:rotate-12"
-                style={{ fontSize: "1.5em" }}
-              />
-            </Link>
-            <Link href="/" target="_blank" rel="noopener noreferrer">
-              <DextoolsIcon
-                className="fill-white hover:fill-primaryColor transform transition-all duration-300 hover:scale-110 hover:rotate-12"
-                style={{ fontSize: "1.5em" }}
-              />
-            </Link>
+              <FaTwitter className="w-6 h-6" />
+            </a>
           </div>
+
+          <p className="text-xs text-gray-500 drop-shadow-lg mt-4">
+            © 2025 Anonium VPN. All rights reserved.
+          </p>
         </div>
-        <p className="text-sm">
-          Copyright © 2025. All Rights Reserved by
-          <span className="text-primaryColor font-semibold"> Obscura</span>
-        </p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

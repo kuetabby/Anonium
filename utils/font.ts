@@ -30,8 +30,9 @@ import localFont from "next/font/local";
 // });
 
 export const LexendExaDisplay = localFont({
-  src: "./fonts/Azonix.otf",
+  src: "./fonts/OriginTech.otf",
   weight: "400",
   display: "swap",
+
   preload: true,
 });

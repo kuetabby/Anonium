@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LexendExaDisplay } from "@/utils/font";
 
-const app_title = "Obscura";
-const app_name = "Obscura";
+const app_title = "Anonium VPN";
+const app_name = "Anonium VPN";
 const description = "Encrypted. Decentralized. AI-Ready";
 
 export const metadata: Metadata = {
