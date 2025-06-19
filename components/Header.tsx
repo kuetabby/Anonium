@@ -1,15 +1,15 @@
 import React from "react";
-import { Menu, X } from "lucide-react"; // Use Lock icon representing security and VPN
+import { Menu, X } from "lucide-react"; // Import icon untuk menu dan close
 import Image from "next/image";
 
 interface HeaderProps {
-  isMenuOpen: boolean; // Define the type for isMenuOpen
-  setIsMenuOpen: (value: boolean) => void; // Define the type for setIsMenuOpen
+  isMenuOpen: boolean; // Tipe untuk isMenuOpen
+  setIsMenuOpen: (value: boolean) => void; // Tipe untuk setIsMenuOpen
 }
 
-// Define color variables for easy updates
-const primaryGradient = "from-[#b6066e] to-[#b6066e]"; // Gradient using #b6066e (you can change to a more complex gradient if needed)
-const textColor = "text-white"; // Text color
+// Ubah warna utama menjadi solid
+const primaryColor = "#FF003A"; // Solid color #FF003A
+const textColor = "text-white"; // Warna teks
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                   className="object-contain z-10 drop-shadow-lg"
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-r ${primaryGradient} animate-pulse opacity-75`}
+                  className={`absolute inset-0 bg-${primaryColor} animate-pulse opacity-75`}
                 ></div>
               </div>
               <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full animate-pulse shadow-lg shadow-yellow-400/50 flex items-center justify-center z-50">
@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             </div>
             <div>
               <h1
-                className={`text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r ${primaryGradient} bg-clip-text text-white drop-shadow-2xl`}
+                className={`text-xl sm:text-2xl lg:text-3xl font-black text-[${primaryColor}] drop-shadow-2xl`}
               >
                 Anonium
               </h1>
@@ -56,38 +56,24 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Updated Navigation for Desktop */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10 ml-auto">
-            {/* Added ml-auto to align items to the right */}
             {["Home", "About", "Benefits", "Roadmap"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className={`text-white hover:text-[#b6066e] transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg`}
+                className={`text-white hover:text-[#FF003A] transition-all duration-300 relative group font-semibold text-lg drop-shadow-lg`}
               >
                 {item}
                 <span
-                  className={`absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r ${primaryGradient} group-hover:w-full transition-all duration-500 rounded-full shadow-lg shadow-red-400/50`}
+                  className={`absolute -bottom-2 left-0 w-0 h-1 bg-[${primaryColor}] group-hover:w-full transition-all duration-500 rounded-full shadow-lg shadow-red-400/50`}
                 ></span>
               </a>
             ))}
-            {/* Uncomment to enable Subscribe Now button */}
-            {/* <button
-              className={`bg-gradient-to-r ${primaryGradient} text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-500 transform hover:scale-110 font-bold text-sm sm:text-lg relative overflow-hidden group shadow-xl shadow-orange-500/30`}
-            >
-              <span className="relative z-10 drop-shadow-lg flex items-center gap-2">
-                <Wallet className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="hidden sm:inline">Subscribe Now</span>
-                <span className="sm:hidden">Subscribe</span>
-              </span>
-              <div
-                className={`absolute inset-0 bg-gradient-to-r ${primaryGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-              ></div>
-            </button> */}
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
-              className="text-white bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm p-3 rounded-xl border border-red-500/30 hover:border-red-400/50 transition-all duration-300 shadow-lg shadow-red-500/20"
+              className="text-white bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm p-3 rounded-xl border border-[#FF003A] hover:border-red-400/50 transition-all duration-300 shadow-lg shadow-red-500/20"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -99,10 +85,9 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           </div>
         </div>
       </div>
-
       {/* Enhanced Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-2xl border-b border-red-500/30 shadow-2xl shadow-red-500/20">
+        <div className="lg:hidden bg-black/95 backdrop-blur-2xl border-b border-[#FF003A] shadow-2xl shadow-red-500/20">
           <div className="px-4 sm:px-6 py-6 sm:py-8 space-y-6 text-center">
             {["Home", "About", "Benefits", "Roadmap"].map((item) => (
               <a
@@ -114,14 +99,6 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 {item}
               </a>
             ))}
-            {/* Uncomment to enable Subscribe Now button */}
-            {/* <button
-              className={`w-full bg-gradient-to-r ${primaryGradient} text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-red-500/30 hover:shadow-orange-500/50 transition-all duration-500 flex items-center justify-center gap-3`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Wallet className="w-5 h-5" />
-              Subscribe Now
-            </button> */}
           </div>
         </div>
       )}

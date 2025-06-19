@@ -134,13 +134,13 @@ const PricingSection = () => {
       id="pricing"
       className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#b6066e]/10 to-black-500/10 backdrop-blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#ff003a]/10 to-black-500/10 backdrop-blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto relative">
         <ScrollReveal direction="up" delay={200} retrigger={true}>
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 drop-shadow-2xl">
-              <span className="text-[#b6066e] text-transparent">
+              <span className="text-[#ff003a] text-transparent">
                 PRICING PLANS
               </span>
               <br />
@@ -162,12 +162,12 @@ const PricingSection = () => {
               delay={400 + index * 100}
               retrigger={true}
             >
-              <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-[#b6066e]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-[#b6066e] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg  flex flex-col justify-center hover:shadow-2xl hover:shadow-[#b6066e] h-full">
+              <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-[#ff003a]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-[#ff003a] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg  flex flex-col justify-center hover:shadow-2xl hover:shadow-[#ff003a] h-full">
                 <div className="p-6 text-center flex-grow">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {plan.plan}
                   </h3>
-                  <span className="text-xl font-semibold text-[#b6066e]">
+                  <span className="text-xl font-semibold text-[#ff003a]">
                     {plan.price}
                   </span>
                   <div className="mt-4 mb-6 w-full h-px bg-gradient-to-r from-red-300 to-black-300"></div>
@@ -181,7 +181,7 @@ const PricingSection = () => {
                           key={featureIndex}
                           className="flex items-center mb-1"
                         >
-                          <Plus className="w-4 h-4 text-[#b6066e] mr-2" />
+                          <Plus className="w-4 h-4 text-[#ff003a] mr-2" />
                           {feature}
                         </li>
                       ))}
@@ -190,7 +190,7 @@ const PricingSection = () => {
                 </div>
                 <button
                   //   onClick={() => togglePricing(index)}
-                  className="w-full px-6 py-3 text-center text-white bg-[#b6066e] rounded-b-lg hover:opacity-80 transition-opacity duration-300"
+                  className="w-full px-6 py-3 text-center text-white bg-[#ff003a] rounded-b-lg hover:opacity-80 transition-opacity duration-300"
                 >
                   {/* {openPricing === index ? "Hide Details" : "View Details"} */}
                   Subscribe Now
@@ -215,7 +215,7 @@ const PricingSection = () => {
         {/* Pricing CTA */}
         {/* <ScrollReveal direction="up" delay={800} retrigger={true}>
           <div className="text-center mt-12 sm:mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[#b6066e]/20 shadow-xl shadow-[#b6066e]/10">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[#ff003a]/20 shadow-xl shadow-[#ff003a]/10">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 drop-shadow-lg">
                 Ready to get started?
               </h3>
@@ -224,10 +224,10 @@ const PricingSection = () => {
                 today!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-[#b6066e] to-black-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:shadow-xl hover:shadow-[#b6066e]/30 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <button className="bg-gradient-to-r from-[#ff003a] to-black-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:shadow-xl hover:shadow-[#ff003a]/30 transition-all duration-300 transform hover:scale-105 shadow-lg">
                   Get Started
                 </button>
-                <button className="border-2 border-[#b6066e] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:bg-[#b6066e]/10 hover:border-red-400 transition-all duration-300 backdrop-blur-sm shadow-lg">
+                <button className="border-2 border-[#ff003a] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:bg-[#ff003a]/10 hover:border-red-400 transition-all duration-300 backdrop-blur-sm shadow-lg">
                   Contact Sales
                 </button>
               </div>

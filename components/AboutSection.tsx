@@ -89,23 +89,23 @@ const ScrollReveal = ({
 const AboutSection = () => {
   const cryptoFeatures = [
     {
-      icon: <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-[#b6066e]" />,
+      icon: <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-[#ff003a]" />,
       title: "Global Server Access",
       description:
         "Connect to servers in over 50 countries for versatile access.",
-      bg: "bg-gradient-to-br from-[#b6066e]/20 to-black/35",
+      bg: "bg-gradient-to-br from-[#ff003a]/20 to-black/35",
     },
     {
-      icon: <Wallet className="w-6 h-6 sm:w-8 sm:h-8 text-[#b6066e]" />,
+      icon: <Wallet className="w-6 h-6 sm:w-8 sm:h-8 text-[#ff003a]" />,
       title: "Top-Level Security",
       description: "End-to-end encryption ensures your data remains secure.",
-      bg: "bg-gradient-to-br from-[#b6066e]/20 to-black/35",
+      bg: "bg-gradient-to-br from-[#ff003a]/20 to-black/35",
     },
     {
-      icon: <Lock className="w-6 h-6 sm:w-8 sm:h-8 text-[#b6066e]" />,
+      icon: <Lock className="w-6 h-6 sm:w-8 sm:h-8 text-[#ff003a]" />,
       title: "Complete Privacy",
       description: "Surf the web anonymously without leaving a trace.",
-      bg: "bg-gradient-to-br from-[#b6066e]/20 to-black/35",
+      bg: "bg-gradient-to-br from-[#ff003a]/20 to-black/35",
     },
   ];
 
@@ -114,13 +114,13 @@ const AboutSection = () => {
       id="about"
       className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#b6066e]/10 to-black-500/10 backdrop-blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#ff003a]/10 to-black-500/10 backdrop-blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <ScrollReveal direction="up" delay={200} retrigger={true}>
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-5xl md:text-6xl">
-              <span className="text-[#b6066e] font-bold">THE FUTURE</span>
+              <span className="text-[#ff003a] font-bold">THE FUTURE</span>
               <br />
               <span className="text-white drop-shadow-2xl">
                 OF ONLINE PRIVACY
@@ -129,12 +129,12 @@ const AboutSection = () => {
             <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto drop-shadow-lg px-4">
               We&lsquo;re not just providing a VPN – we&lsquo;re revolutionizing
               your online privacy through
-              <span className="text-[#b6066e] font-bold">
+              <span className="text-[#ff003a] font-bold">
                 {" "}
                 decentralized technology
               </span>{" "}
               and{" "}
-              <span className="text-[#b6066e] font-bold">
+              <span className="text-[#ff003a] font-bold">
                 robust security protocols
               </span>
               .
@@ -149,7 +149,7 @@ const AboutSection = () => {
             <div className="space-y-6 sm:space-y-8">
               <h3 className="text-2xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 drop-shadow-lg">
                 Global Network for
-                <span className="block text-[#b6066e] ">Secure Browsing</span>
+                <span className="block text-[#ff003a] ">Secure Browsing</span>
               </h3>
 
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed drop-shadow-lg">
@@ -174,7 +174,7 @@ const AboutSection = () => {
                     <div
                       className={`${feature.bg} backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/10 text-center hover:scale-105 transition-transform duration-300 shadow-lg flex flex-col h-full`}
                     >
-                      <div className="text-[#b6066e] mb-2 flex justify-center">
+                      <div className="text-[#ff003a] mb-2 flex justify-center">
                         {feature.icon}
                       </div>
                       <h4 className="text-white font-bold text-xs sm:text-sm mb-2 drop-shadow-lg">
@@ -205,12 +205,12 @@ const Connectivity = ({ className }: { className?: string | undefined }) => (
     className={className}
   >
     <div className="relative">
-      <div className="bg-gradient-to-br from-[#b6066e]/20 via-black-500/20 to-pink-500/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-[#b6066e]/30 relative overflow-hidden shadow-2xl shadow-[#b6066e]/20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#b6066e]/10 to-black-500/10 animate-pulse"></div>
+      <div className="bg-gradient-to-br from-[#ff003a]/20 via-black-500/20 to-pink-500/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-[#ff003a]/30 relative overflow-hidden shadow-2xl shadow-[#ff003a]/20">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#ff003a]/10 to-black-500/10 animate-pulse"></div>
 
         <div className="relative z-10 text-center">
           <div className="w-16 h-16 sm:w-24 sm:h-24 mx-auto mb-4 sm:mb-6 relative">
-            <div className="w-full h-full bg-gradient-to-r from-[#b6066e] to-black-500 rounded-xl sm:rounded-2xl flex items-center justify-center animate-pulse shadow-2xl shadow-red-500/50">
+            <div className="w-full h-full bg-gradient-to-r from-[#ff003a] to-black-500 rounded-xl sm:rounded-2xl flex items-center justify-center animate-pulse shadow-2xl shadow-red-500/50">
               <Image
                 src="/vpn.png"
                 alt="vpn"
