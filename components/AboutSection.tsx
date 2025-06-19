@@ -234,7 +234,7 @@ const Connectivity = ({ className }: { className?: string | undefined }) => (
 
           <div className="bg-[#ff003a]/30 rounded-xl p-3 sm:p-4 font-mono text-xs sm:text-sm">
             <div className="text-green-400 mb-2">$ Network Status</div>
-            <div className="text-red-400 mb-1">Servers Online: 10/50</div>
+            <div className="text-red-400 mb-1">Servers Online: 10/107</div>
             <div className="text-black-400 mb-1">
               Connection Speed: 98.7 Mbps
             </div>

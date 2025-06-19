@@ -4,17 +4,16 @@ import { Plus, Minus } from "lucide-react"; // Import icons for toggling state
 const pricingData = [
   {
     plan: "Basic Plan",
-    price: "$5.99/month",
+    price: "Free",
     features: [
-      "Access to all servers",
+      "Access to 3 servers",
       "Up to 3 devices simultaneously",
       "Basic security features",
-      "24/7 customer support",
     ],
   },
   {
     plan: "Standard Plan",
-    price: "$9.99/month",
+    price: "$10.95/month",
     features: [
       "Access to all servers",
       "Up to 5 devices simultaneously",
@@ -25,7 +24,7 @@ const pricingData = [
   },
   {
     plan: "Premium Plan",
-    price: "$12.99/month",
+    price: "$18.95/month",
     features: [
       "Access to all servers",
       "Unlimited devices",

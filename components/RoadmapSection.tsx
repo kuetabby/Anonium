@@ -101,7 +101,7 @@ const roadmapItems = [
         status: "upcoming",
       },
       {
-        description: "Expand servers to over 50 global locations",
+        description: "Expand servers to over 107 global locations",
         status: "upcoming",
       },
       {

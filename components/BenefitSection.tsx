@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Lock, Globe, Shield, Users, CheckCircle } from "lucide-react"; // VPN relevant icons
+import Image from "next/image";
 
 const useScrollAnimation = (threshold = 0.1, retrigger = true) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -139,14 +140,21 @@ const BenefitSection = () => {
       className="relative py-16 sm:py-32 px-4 sm:px-6 lg:px-8 bg-black"
     >
       <div className="absolute inset-0 z-0">
-        <video
+        <Image
+          src="/bg-benefit.svg"
+          alt="benefit-bg"
+          width={1000}
+          height={1000}
+          className="absolute top-0 left-0 w-full h-full object-cover z-[-2] backdrop-blur-md"
+        />
+        {/* <video
           className="absolute top-0 left-0 w-full h-full object-cover z-[-2] backdrop-blur-md"
           autoPlay
           playsInline
           loop
           muted
           src="/bg-benefits.mp4"
-        />
+        /> */}
       </div>
       <div className="max-w-7xl mx-auto">
         <ScrollReveal direction="up" delay={200} retrigger={true}>
