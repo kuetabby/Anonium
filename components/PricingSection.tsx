@@ -6,7 +6,7 @@ const pricingData = [
     plan: "Basic Plan",
     price: "Free",
     features: [
-      "Access to 3 servers",
+      "Access to 10 servers",
       "Up to 3 devices simultaneously",
       "Basic security features",
     ],
