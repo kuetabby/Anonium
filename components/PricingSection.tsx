@@ -44,8 +44,10 @@ const useScrollAnimation = (threshold = 0.1, retrigger = true) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (retrigger) {
+          // Re-trigger animation every time element enters/exits viewport
           setIsVisible(entry.isIntersecting);
         } else {
+          // Only trigger once
           if (entry.isIntersecting) {
             setIsVisible(true);
           }
@@ -132,13 +134,13 @@ const PricingSection = () => {
       id="pricing"
       className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 relative"
     >
-      <div className="absolute inset-0 from-[#b6066e]/10 to-black/10 bg-gradient-to-br backdrop-blur-3xl rounded-2xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#b6066e]/10 to-black-500/10 backdrop-blur-3xl"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative">
         <ScrollReveal direction="up" delay={200} retrigger={true}>
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 drop-shadow-2xl">
-              <span className="bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">
+              <span className="text-[#b6066e] text-transparent">
                 PRICING PLANS
               </span>
               <br />
@@ -160,15 +162,15 @@ const PricingSection = () => {
               delay={400 + index * 100}
               retrigger={true}
             >
-              <div className="flex flex-wrap items-baseline sm:justify-evenly backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/10 text-center hover:scale-105 transition-transform duration-300 shadow-lg  p-6 transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg flex flex-col justify-center hover:shadow-2xl hover:shadow-[#b6066e] h-full border-2 border-[#b6066e]">
-                <div className="text-center flex-grow">
+              <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-[#b6066e]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-[#b6066e] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg  flex flex-col justify-center hover:shadow-2xl hover:shadow-[#b6066e] h-full">
+                <div className="p-6 text-center flex-grow">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {plan.plan}
                   </h3>
                   <span className="text-xl font-semibold text-[#b6066e]">
                     {plan.price}
                   </span>
-                  <div className="mt-4 mb-6 w-full h-px bg-gradient-to-r from-red-300 to-orange-300"></div>
+                  <div className="mt-4 mb-6 w-full h-px bg-gradient-to-r from-red-300 to-black-300"></div>
                   <div className="text-left">
                     <h4 className="text-lg font-semibold text-white mb-2">
                       Features:
@@ -187,12 +189,13 @@ const PricingSection = () => {
                   </div>
                 </div>
                 <button
-                  onClick={() => togglePricing(index)}
-                  className="w-full px-6 py-3 text-center text-white bg-gradient-to-r from-red-500 to-orange-500 rounded-b-lg hover:opacity-80 transition-opacity duration-300"
+                  //   onClick={() => togglePricing(index)}
+                  className="w-full px-6 py-3 text-center text-white bg-[#b6066e] rounded-b-lg hover:opacity-80 transition-opacity duration-300"
                 >
-                  {openPricing === index ? "Hide Details" : "View Details"}
+                  {/* {openPricing === index ? "Hide Details" : "View Details"} */}
+                  Subscribe Now
                 </button>
-                <div
+                {/* <div
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     openPricing === index
                       ? "max-h-96 opacity-100"
@@ -200,19 +203,19 @@ const PricingSection = () => {
                   }`}
                 >
                   <div className="px-6 py-4 text-gray-300">
-                    {/* Any additional details can go here */}
+                   
                     Expandable details will show here.
                   </div>
-                </div>
+                </div> */}
               </div>
             </ScrollReveal>
           ))}
         </div>
 
         {/* Pricing CTA */}
-        <ScrollReveal direction="up" delay={800} retrigger={true}>
+        {/* <ScrollReveal direction="up" delay={800} retrigger={true}>
           <div className="text-center mt-12 sm:mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-red-500/20 shadow-xl shadow-red-500/10">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[#b6066e]/20 shadow-xl shadow-[#b6066e]/10">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 drop-shadow-lg">
                 Ready to get started?
               </h3>
@@ -221,16 +224,16 @@ const PricingSection = () => {
                 today!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:shadow-xl hover:shadow-red-500/30 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <button className="bg-gradient-to-r from-[#b6066e] to-black-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:shadow-xl hover:shadow-[#b6066e]/30 transition-all duration-300 transform hover:scale-105 shadow-lg">
                   Get Started
                 </button>
-                <button className="border-2 border-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:bg-red-500/10 hover:border-red-400 transition-all duration-300 backdrop-blur-sm shadow-lg">
+                <button className="border-2 border-[#b6066e] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold hover:bg-[#b6066e]/10 hover:border-red-400 transition-all duration-300 backdrop-blur-sm shadow-lg">
                   Contact Sales
                 </button>
               </div>
             </div>
           </div>
-        </ScrollReveal>
+        </ScrollReveal> */}
       </div>
     </section>
   );

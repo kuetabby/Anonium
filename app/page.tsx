@@ -10,6 +10,7 @@ import AboutSection from "@/components/AboutSection";
 // import CTASection from "@/components/CTASection";
 // import Tokenomics from "@/components/Tokenomics";
 import Loader from "@/components/Loader";
+import PricingSection from "@/components/PricingSection";
 
 const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +37,7 @@ const Page = () => {
       <BenefitSection />
       {/* <Tokenomics /> */}
       <RoadmapSection />
+      <PricingSection />
       {/* <FAQSection /> */}
       {/* <CTASection /> */}
       <Footer />
