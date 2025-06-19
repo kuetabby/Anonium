@@ -86,36 +86,104 @@ const ScrollReveal = ({
 
 const roadmapItems = [
   {
-    quarter: "Q2 2025",
-    title: "VPN Core Implementation",
-    description:
-      "Deploy robust VPN architecture for enhanced user privacy and security.",
-    status: "completed",
-    crypto: "Token Integration",
-  },
-  {
     quarter: "Q3 2025",
-    title: "Global Server Expansion",
-    description:
-      "Enhance server reachability to 50+ countries for optimized connectivity.",
-    status: "current",
-    crypto: "Multi-Location Access",
+    plan: [
+      {
+        description: "Launch Anonium VPN",
+        status: "upcoming",
+      },
+      {
+        description: "Add DNS Leak Protection and Automatic Disconnect",
+        status: "upcoming",
+      },
+      {
+        description: "Partner with cloud services",
+        status: "upcoming",
+      },
+      {
+        description: "Expand servers to over 50 global locations",
+        status: "upcoming",
+      },
+      {
+        description: "Roll out multi-device support",
+        status: "upcoming",
+      },
+    ],
+    // crypto: "Foundation and Security",
   },
   {
     quarter: "Q4 2025",
-    title: "User Governance Model",
-    description:
-      "Introduce user-driven governance for community-led development and features.",
-    status: "upcoming",
-    crypto: "Governance Token",
+    plan: [
+      {
+        description: "Community Engagement",
+        status: "upcoming",
+      },
+      {
+        description: "Improve cross-platform compatibility",
+        status: "upcoming",
+      },
+      {
+        description:
+          "Add premium features like dedicated IPs and faster speeds",
+        status: "upcoming",
+      },
+      {
+        description: "Release mobile apps for Android and iOS",
+        status: "upcoming",
+      },
+    ],
+    // crypto: "Multi-Device Support and Expansion",
   },
   {
     quarter: "Q1 2026",
-    title: "Advanced Security Features",
-    description:
-      "Integrate AI-based security measures for real-time protection and threat detection.",
-    status: "upcoming",
-    crypto: "Enhanced Security",
+    plan: [
+      {
+        description:
+          "Engage with the community through events and privacy education",
+        status: "upcoming",
+      },
+      {
+        description: "Introduce decentralized VPN nodes",
+        status: "upcoming",
+      },
+      {
+        description: "Add peer-to-peer encryption",
+        status: "upcoming",
+      },
+      {
+        description: "Focus on decentralized data storage",
+        status: "upcoming",
+      },
+    ],
+    // crypto: "Decentralization and Enhanced Privacy",
+  },
+  {
+    quarter: "Q2 2026",
+    plan: [
+      {
+        description:
+          "Engage the community through user-driven content, feedback loops, and collaborations",
+        status: "upcoming",
+      },
+      {
+        description: "Introduce advanced routing",
+        status: "upcoming",
+      },
+      {
+        description: "Implement a decentralized DNS",
+        status: "upcoming",
+      },
+      {
+        description: "Expand into decentralized apps and web3 integration",
+        status: "upcoming",
+      },
+      {
+        description:
+          "Grow Anonium with revenue sharing and strategic partnerships",
+        status: "upcoming",
+      },
+    ],
+    // crypto: "AI Integration, Future Growth, and Revenue Share",
   },
 ];
 
@@ -170,30 +238,32 @@ const RoadmapSection = () => {
                           <span className="text-red-300 font-bold text-sm font-mono">
                             {item.quarter}
                           </span>
-                          <span className="bg-gradient-to-r from-black-400 to-[#b6066e] text-white px-2 py-1 rounded-full text-xs font-bold">
+                          {/* <span className="bg-gradient-to-r from-orange-400 to-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
                             {item.crypto}
-                          </span>
+                          </span> */}
                         </div>
 
-                        <div className="flex items-center gap-3 mb-4">
-                          {item.status === "completed" && (
-                            <CheckCircle className="w-5 h-5 text-green-400" />
-                          )}
-                          {item.status === "current" && (
-                            <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-                          )}
-                          {item.status === "upcoming" && (
-                            <div className="w-3 h-3 border-2 border-gray-400 rounded-full"></div>
-                          )}
-
-                          <h3 className="text-lg font-bold text-white drop-shadow-lg">
-                            {item.title}
-                          </h3>
-                        </div>
-
-                        <p className="text-gray-300 text-sm leading-relaxed drop-shadow-lg">
-                          {item.description}
-                        </p>
+                        {item.plan.map((item, i) => (
+                          <div className="flex items-start gap-3 mb-4" key={i}>
+                            {" "}
+                            {/* Change to items-start for top alignment */}
+                            {/* Completed Status - Green Circle */}
+                            {item.status === "completed" && (
+                              <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                            )}
+                            {/* Current Status - Animated Yellow Circle */}
+                            {item.status === "current" && (
+                              <div className="w-4 h-4 bg-yellow-400 rounded-full animate-pulse flex-shrink-0"></div>
+                            )}
+                            {/* Upcoming Status - Gray Circle */}
+                            {item.status === "upcoming" && (
+                              <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0"></div>
+                            )}
+                            <p className="text-sm text-white drop-shadow-lg">
+                              {item.description}
+                            </p>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -212,30 +282,32 @@ const RoadmapSection = () => {
                           <span className="text-red-300 font-bold text-lg font-mono">
                             {item.quarter}
                           </span>
-                          <span className="bg-gradient-to-r from-black-400 to-[#b6066e] text-white px-3 py-1 rounded-full text-sm font-bold">
+                          {/* <span className="bg-gradient-to-r from-orange-400 to-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                             {item.crypto}
-                          </span>
+                          </span> */}
                         </div>
 
-                        <div className="flex items-center gap-3 mb-4">
-                          {item.status === "completed" && (
-                            <CheckCircle className="w-6 h-6 text-green-400" />
-                          )}
-                          {item.status === "current" && (
-                            <div className="w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
-                          )}
-                          {item.status === "upcoming" && (
-                            <div className="w-4 h-4 border-2 border-gray-400 rounded-full"></div>
-                          )}
-
-                          <h3 className="text-2xl font-bold text-white drop-shadow-lg">
-                            {item.title}
-                          </h3>
-                        </div>
-
-                        <p className="text-gray-300 text-lg leading-relaxed drop-shadow-lg">
-                          {item.description}
-                        </p>
+                        {item.plan.map((item, i) => (
+                          <div className="flex items-start gap-3 mb-4" key={i}>
+                            {" "}
+                            {/* Change to items-start for top alignment */}
+                            {/* Completed Status - Green Circle */}
+                            {item.status === "completed" && (
+                              <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                            )}
+                            {/* Current Status - Animated Yellow Circle */}
+                            {item.status === "current" && (
+                              <div className="w-4 h-4 bg-yellow-400 rounded-full animate-pulse flex-shrink-0"></div>
+                            )}
+                            {/* Upcoming Status - Gray Circle */}
+                            {item.status === "upcoming" && (
+                              <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0"></div>
+                            )}
+                            <p className="font-bold text-white drop-shadow-lg">
+                              {item.description}
+                            </p>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
