@@ -142,6 +142,7 @@ const BenefitSection = () => {
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-[-2] backdrop-blur-md"
           autoPlay
+          playsInline
           loop
           muted
           src="/bg-benefits.mp4"

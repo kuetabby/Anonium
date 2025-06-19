@@ -205,7 +205,7 @@ const Connectivity = ({ className }: { className?: string | undefined }) => (
     className={className}
   >
     <div className="relative">
-      <div className="bg-gradient-to-br from-[#ff003a]/20 via-black-500/20 to-pink-500/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-[#ff003a]/30 relative overflow-hidden shadow-2xl shadow-[#ff003a]/20">
+      <div className="bg-gradient-to-br from-[#ff003a]/20 via-black-500/20 to-black-500/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-[#ff003a]/30 relative overflow-hidden shadow-2xl shadow-[#ff003a]/20">
         <div className="absolute inset-0 bg-gradient-to-br from-[#ff003a]/10 to-black-500/10 animate-pulse"></div>
 
         <div className="relative z-10 text-center">
@@ -232,7 +232,7 @@ const Connectivity = ({ className }: { className?: string | undefined }) => (
             reliable and secure browsing experience.
           </p>
 
-          <div className="bg-black/30 rounded-xl p-3 sm:p-4 font-mono text-xs sm:text-sm">
+          <div className="bg-[#ff003a]/30 rounded-xl p-3 sm:p-4 font-mono text-xs sm:text-sm">
             <div className="text-green-400 mb-2">$ Network Status</div>
             <div className="text-red-400 mb-1">Servers Online: 10/50</div>
             <div className="text-black-400 mb-1">

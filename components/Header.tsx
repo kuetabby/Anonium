@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           <div className="flex items-center space-x-3 sm:space-x-4">
             <div className="relative group">
               <div
-                className={`w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center relative overflow-hidden shadow-2xl shadow-red-500/50 hover:shadow-orange-500/50 transition-all duration-500`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center relative overflow-hidden shadow-2xl shadow-[#ff003a  ]-500/50 hover:shadow-[#ff003a]-500/50 transition-all duration-500`}
               >
                 <Image
                   src="/vpn.png" // Path to the image in the public folder
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                   className={`absolute inset-0 bg-${primaryColor} animate-pulse opacity-75`}
                 ></div>
               </div>
-              <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full animate-pulse shadow-lg shadow-yellow-400/50 flex items-center justify-center z-50">
+              <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-4 h-4 sm:w-6 sm:h-6 bg-[#ff003a] rounded-full animate-pulse shadow-lg shadow-[#ff003a] flex items-center justify-center z-50">
                 <div className="w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full"></div>
               </div>
             </div>
