@@ -1,6 +1,8 @@
 import React from "react";
 import { Menu, X } from "lucide-react"; // Import icon untuk menu dan close
 import Image from "next/image";
+import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface HeaderProps {
   isMenuOpen: boolean; // Tipe untuk isMenuOpen
@@ -48,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               >
                 Anonium
               </h1>
-              <div className="text-white text-xs sm:text-sm text-red-400 font-mono tracking-wider drop-shadow-lg">
+              <div className=" text-xs sm:text-sm text-red-400 font-mono tracking-wider drop-shadow-lg">
                 v1.0 SECURE
               </div>
             </div>
@@ -56,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Updated Navigation for Desktop */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10 ml-auto">
-            {["Home", "About", "Benefits", "Roadmap"].map((item) => (
+            {["Home", "About", "Benefits", "Roadmap", "Pricing"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -68,6 +70,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 ></span>
               </a>
             ))}
+
+            <Link href={`#pricing`} onClick={() => setIsMenuOpen(false)}>
+              <Button
+                //   onClick={() => togglePricing(index)}
+                className="w-auto px-6 py-3 text-center text-white bg-[#ff003a] rounded-lg hover:opacity-80 transition-opacity duration-300 disabled:bg-gray-400 disabled:text-gray-700 disabled:cursor-not-allowed"
+              >
+                {/* {openPricing === index ? "Hide Details" : "View Details"} */}
+                Get AnoniumVPN
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -85,11 +97,12 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           </div>
         </div>
       </div>
+
       {/* Enhanced Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-2xl border-b border-[#FF003A] shadow-2xl shadow-red-500/20">
           <div className="px-4 sm:px-6 py-6 sm:py-8 space-y-6 text-center">
-            {["Home", "About", "Benefits", "Roadmap"].map((item) => (
+            {["Home", "About", "Benefits", "Roadmap", "Pricing"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -99,6 +112,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 {item}
               </a>
             ))}
+
+            <Link href={`#pricing`} onClick={() => setIsMenuOpen(false)}>
+              <Button
+                //   onClick={() => togglePricing(index)}
+                className="w-auto px-6 py-3 text-center text-white bg-[#ff003a] rounded-lg hover:opacity-80 transition-opacity duration-300 disabled:bg-gray-400 disabled:text-gray-700 disabled:cursor-not-allowed"
+              >
+                {/* {openPricing === index ? "Hide Details" : "View Details"} */}
+                Get AnoniumVPN
+              </Button>
+            </Link>
           </div>
         </div>
       )}

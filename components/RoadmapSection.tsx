@@ -197,7 +197,7 @@ const RoadmapSection = () => {
         <ScrollReveal direction="up" delay={200} retrigger={true}>
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 drop-shadow-2xl">
-              <span className="text-[#ff003a]">VPN ROADMAP</span>
+              <span className="text-[#ff003a]">Anonium ROADMAP</span>
               <br />
               <span className="text-white drop-shadow-2xl">
                 TO A SECURE FUTURE

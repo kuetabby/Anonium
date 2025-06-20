@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Plus, Minus } from "lucide-react"; // Import icons for toggling state
+import { Button } from "@chakra-ui/react";
 
 const pricingData = [
   {
@@ -10,6 +11,8 @@ const pricingData = [
       "Up to 3 devices simultaneously",
       "Basic security features",
     ],
+    text: "Basic",
+    isDisabled: false,
   },
   {
     plan: "Standard Plan",
@@ -21,6 +24,8 @@ const pricingData = [
       "Ad-blocker",
       "24/7 customer support",
     ],
+    text: "Standard",
+    isDisabled: true,
   },
   {
     plan: "Premium Plan",
@@ -32,6 +37,8 @@ const pricingData = [
       "Ad-blocker",
       "Priority support",
     ],
+    text: "Premium",
+    isDisabled: true,
   },
 ];
 
@@ -161,7 +168,7 @@ const PricingSection = () => {
               delay={400 + index * 100}
               retrigger={true}
             >
-              <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-[#ff003a]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-[#ff003a] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg  flex flex-col justify-center hover:shadow-2xl hover:shadow-[#ff003a] h-full">
+              <div className="flex flex-wrap items-baseline sm:justify-evenly bg-gradient-to-br from-[#ff003a]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-[#ff003a] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg flex-col justify-center hover:shadow-2xl hover:shadow-[#ff003a] h-full">
                 <div className="p-6 text-center flex-grow">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {plan.plan}
@@ -187,13 +194,14 @@ const PricingSection = () => {
                     </ul>
                   </div>
                 </div>
-                <button
+                <Button
                   //   onClick={() => togglePricing(index)}
-                  className="w-full px-6 py-3 text-center text-white bg-[#ff003a] rounded-b-lg hover:opacity-80 transition-opacity duration-300"
+                  className="w-full px-6 py-3 text-center text-white bg-[#ff003a] rounded-b-lg hover:opacity-80 transition-opacity duration-300 disabled:bg-gray-400 disabled:text-gray-700 disabled:cursor-not-allowed"
+                  disabled={plan.isDisabled}
                 >
                   {/* {openPricing === index ? "Hide Details" : "View Details"} */}
-                  Subscribe Now
-                </button>
+                  Get {plan.text}
+                </Button>
                 {/* <div
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     openPricing === index

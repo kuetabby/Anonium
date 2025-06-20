@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Activity, ArrowRight, Play, Newspaper } from "lucide-react";
+import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
 // Custom hook for scroll animation
 const useScrollAnimation = (threshold = 0.1, retrigger = true) => {
@@ -175,13 +177,15 @@ const HeroSection = () => {
 
           <ScrollReveal direction="up" delay={1000}>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-20 px-4">
-              <button className="group bg-[#FF003A] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:shadow-md transition-all duration-500 relative overflow-hidden">
-                <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
-                  <Play className="w-5 h-5 sm:w-6 sm:h-6" />
-                  Start Now
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
+              <Link href={`#pricing`}>
+                <Button className="group bg-[#FF003A] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:shadow-md transition-all duration-500 relative overflow-hidden">
+                  <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
+                    {/* <Play className="w-5 h-5 sm:w-6 sm:h-6" /> */}
+                    Get AnoniumVPN
+                    {/* <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" /> */}
+                  </span>
+                </Button>
+              </Link>
 
               <button className="group border-2 border-[#FF003A] text-[#FF003A] bg-transparent px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold hover:bg-black hover:shadow-md transition-all duration-500 relative overflow-hidden">
                 <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
@@ -193,11 +197,11 @@ const HeroSection = () => {
             </div>
           </ScrollReveal>
 
+          <div className="h-14" />
+
           {/* Stats */}
-          <h1 className="text-4xl font-bold mt-10 mb-6 sm:mb-8 leading-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-red-200 to-white">
-              Powered By
-            </span>
+          <h1 className="text-4xl font-bold mt-10 mb-6 sm:mb-8 relative">
+            Powered By
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-10 ">
             {stats.map((stat, index) => (
@@ -214,7 +218,7 @@ const HeroSection = () => {
                       : ""
                   }`} // Center last item on sm
                 >
-                  <div className="flex flex-wrap items-baseline sm:justify-evenlybg-gradient-to-br from-[#ff003a]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl border-2 border-[#ff003a] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg h-[150px] flex flex-col justify-center hover:shadow-2xl hover:shadow-[#ff003a]">
+                  <div className="flex flex-wrap items-baseline sm:justify-evenlybg-gradient-to-br from-[#ff003a]/20 to-black-500/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl border-2 border-[#ff003a] transition-all duration-500 transform hover:scale-105 relative overflow-hidden shadow-lg h-[150px] flex-col justify-center hover:shadow-2xl hover:shadow-[#ff003a]">
                     <Image
                       src={stat.img}
                       alt={stat.label}
